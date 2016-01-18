@@ -1,0 +1,27 @@
+import static java.lang.Math.*;
+
+
+public class BSModel {
+	double StockPrice;
+	double StrikePrice;
+	double timeMat;
+	double rfr;
+	double volatility;
+	
+
+	
+	public void computeD1(double StockPrice, double StrikePrice, 
+			double volatility, double timeMat, double rfr) {
+		double d1 = (log(StockPrice/StrikePrice) + 
+				((rfr + ((volatility*volatility) / 2 )) * timeMat)) / (volatility * sqrt(timeMat));
+		
+		double d2 = d1 - (volatility * sqrt(timeMat));
+		
+		//double norm_dist_d1 = (1.0 + CND(d1 / (sqrt(2)) / 2.0));
+		//double norm_dist_d2 = (1.0 + CND(d2 / (sqrt(2)) / 2.0));
+		
+		
+		
+		
+	}
+}	
